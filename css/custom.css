@@ -1,0 +1,119 @@
+/* ------------------------
+	Custom CSS 
+	 ------------------------*/
+body{
+	background-color:#111;
+	padding-top: 50px;
+}
+.navbar-brand{
+	margin-top: -6px;
+}
+.social-icons{
+	padding: 5px 5px;
+
+}
+/*----------------------------------------
+Carousel Styles
+----------------------------------------*/
+#myCarousel {
+	margin-top: 3px;
+}
+
+#myCarousel .item {	height:480px;}
+
+#slide1 {
+	background: url('../images/carousel/img-1.jpg') top center no-repeat;
+}
+#slide2 {
+	background: url('../images/carousel/img-2.jpg') top center no-repeat;
+}
+#slide3 {
+	background: url('../images/carousel/img-3.jpg') top center no-repeat;
+}
+#slide4 {
+	background: url('../images/carousel/img-4.jpg') top center no-repeat;
+}
+#slide5 {
+	background: url('../images/carousel/img-5.jpg') top center no-repeat;
+}
+#slide6 {
+	background: url('../images/carousel/img-6.jpg') top center no-repeat;
+}
+
+/*----------------------------------------
+Media Queries
+----------------------------------------*/
+
+/* Portrait & Landscape Phone 
+@media (max-width: 480px){
+	#myCarousel .item {	height: 310px}
+
+	#slide1 {
+		background: url('../images/carousel/img-1.jpg') top center no-repeat;
+	}
+	#slide2 {
+		background: url('../images/carousel/img-2.jpg') top center no-repeat;
+	}
+	#slide3 {
+		background: url('../images/carousel/img-3.jpg') top center no-repeat;
+	}
+	#slide4 {
+		background: url('../images/carousel/img-4.jpg') top center no-repeat;
+	}
+	#slide5 {
+		background: url('../images/carousel/img-5.jpg') top center no-repeat;
+	}
+	#slide6 {
+		background: url('../images/carousel/img-6.jpg') top center no-repeat;
+	}
+}
+
+/* Landscape Phone to Portrait Tablet
+@media (max-width: 768px){
+	#myCarousel .item {	height: 700px}
+
+	#slide1 {
+		background: url('../images/carousel/img-1.jpg') top center no-repeat;
+	}
+	#slide2 {
+		background: url('../images/carousel/img-2.jpg') top center no-repeat;
+	}
+	#slide3 {
+		background: url('../images/carousel/img-3.jpg') top center no-repeat;
+	}
+	#slide4 {
+		background: url('../images/carousel/img-4.jpg') top center no-repeat;
+	}
+	#slide5 {
+		background: url('../images/carousel/img-5.jpg') top center no-repeat;
+	}
+	#slide6 {
+		background: url('../images/carousel/img-6.jpg') top center no-repeat;
+	}
+	
+}
+
+/* Large Desktop
+@media (max-width: 1200px){
+	#myCarousel .item {	height: 700px}
+
+	#slide1 {
+		background: url('../images/carousel/img-1.jpg') top center no-repeat;
+	}
+	#slide2 {
+		background: url('../images/carousel/img-2.jpg') top center no-repeat;
+	}
+	#slide3 {
+		background: url('../images/carousel/img-3.jpg') top center no-repeat;
+	}
+	#slide4 {
+		background: url('../images/carousel/img-4.jpg') top center no-repeat;
+	}
+	#slide5 {
+		background: url('../images/carousel/img-5.jpg') top center no-repeat;
+	}
+	#slide6 {
+		background: url('../images/carousel/img-6.jpg') top center no-repeat;
+	}
+	
+}*/
