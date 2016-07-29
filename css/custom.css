@@ -19,7 +19,7 @@ Carousel Styles
 	margin-top: 3px;
 }
 
-#myCarousel .item {	height:480px;}
+#myCarousel .item {	height:480px; }
 
 #slide1 {
 	background: url('../images/carousel/img-1.jpg') top center no-repeat;
@@ -38,6 +38,12 @@ Carousel Styles
 }
 #slide6 {
 	background: url('../images/carousel/img-6.jpg') top center no-repeat;
+}
+#slide7 {
+	background: url('../images/carousel/img-7.jpg') top center no-repeat;
+}
+#slide8 {
+	background: url('../images/carousel/img-8.jpg') top center no-repeat;
 }
 
 /*----------------------------------------
@@ -117,3 +123,11 @@ Media Queries
 	}
 	
 }*/
+.responsive-col{
+	color: silver;
+}
+.carousel-watermark{
+	height: 60px;
+	width: auto;
+	float: left;
+}
