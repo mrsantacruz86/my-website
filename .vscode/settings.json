@@ -1,0 +1,16 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+//Editor
+    "editor.fontSize": 14,
+    "editor.insertSpaces": false,
+    "editor.quickSuggestionsDelay": 3,
+    "editor.cursorStyle": "line",
+
+//Window
+    "window.reopenFolders": "all",
+    "window.zoomLevel": 0,
+
+//Files
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 300000,
+}
