@@ -1,0 +1,10 @@
+{
+  "name": "NJPhotography",
+  "version": "1.0.0",
+  "description": "NJPhotography web portfolio",
+  "main": "home.js",
+  "repository": "https://github.com/mrsantacruz86/my-website.git",
+  "author": "Nelson Diaz <abnerdc86@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
