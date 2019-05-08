@@ -5,156 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
     <title>NJ Photography</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <!-- Custom CSS-->
-
-    <link href="css/custom.css" rel="stylesheet" type="text/css">
-
 
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
-          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="home.html">
-            <img src="images/watermark001.png" width="auto" height="40px">
-          </a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="home.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
-              aria-expanded="false"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">English</a></li>
-                <li><a href="#">Español</a></li>
-              </ul>
-            </li>            
-          </ul>
-          <!-- navbar right -->
-          <ul class="nav navbar-nav navbar-right">
-            <li><a class="social-icons" href="https://www.facebook.com/NJPhotographyMiami/" target="_blank"><span class="fa fa-facebook-official fa-lg"></span></a></li>
-            <li><a class="social-icons" href="https://www.instagram.com/mrsantacruz86/?ref=badge" target="_blank"><span class="fa fa-instagram fa-lg"></span></a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="index.html"><img src="./src/images/watermark001.png" alt="Logo" height="24"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./src/gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Language
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">English</a>
+                  <a class="dropdown-item" href="#">Spanish</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <div>
+                <a class="social-icons" href="https://www.facebook.com/NJPhotographyMiami/" target="_blank"><span class="fab fa-facebook fa-lg"></span></a>
+                <a class="social-icons" href="https://www.instagram.com/mrsantacruz86/?ref=badge" target="_blank"><span class="fab fa-instagram fa-lg"></span></a>
+            </div>
+          </div>
+        </nav>
     
     <div class="container">
-        <!-- Carousel-->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-            <li data-target="#myCarousel" data-slide-to="5"></li>
-            <li data-target="#myCarousel" data-slide-to="6"></li>
-            <li data-target="#myCarousel" data-slide-to="7"></li> 
-          </ol>
-  
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active" id="slide1">
-              <div class="carousel-caption">
-                <h1>Image 1</h1>
-                <p></p>
-              </div>
-            </div>
-            <div class="item" id="slide2">
-              <!--<img src="images/watermark001.png" alt="" class="carousel-watermark">  -->           
-              <div class="carousel-caption">
-                <h1>Image 2</h1>
-              </div>
-            </div>
-            <div class="item" id="slide3">
-              <div class="carousel-caption">
-                <h1>Image 3</h1>
-              </div>
-            </div>
-              <div class="item" id="slide4">
-                <div class="carousel-caption">
-                  <h1>Image 4</h1>
-                </div>
-              </div>
-              <div class="item" id="slide5">
-                <div class="carousel-caption">
-                  <h1>Image 5</h1>
-                </div>
-              </div>
-              <div class="item" id="slide6">
-                <div class="carousel-caption">
-                  <h1>Image 6</h1>
-                </div>
-              </div>
-              <div class="item" id="slide7">
-                <div class="carousel-caption">
-                  <h1>Image 7</h1>
-                </div>
-              </div>
-              <div class="item" id="slide8">
-                <div class="carousel-caption">
-                  <h1>Image 8</h1>
-                </div>
-              </div>
-          </div> <!-- / Carousel -->
-
-          <!-- Controls -->
-          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="icon-prev" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="icon-next" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-          <!-- End Controls -->
-        </div><!--End Carousel-->
-
-				<br>
+        <div id="root">Test</div>
 				
 				<div class="row">          
-					<div class="col-xs-4 responsive-col">
-						<h2>Topic</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quos minus, facere architecto asperiores voluptatem ipsum saepe, dolor inventore fuga soluta perferendis adipisci, provident nesciunt voluptate magni, labore! Consectetur, commodi.</p>
+					<div class="col">
+						<h2>Topic 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quos minus, facere architecto asperiores voluptatem ipsum saepe, dolor inventore fuga soluta perferendis adipisci, provident nesciunt voluptate magni, labore! Consectetur, commodi.</p>
 					</div>
-					<div class="col-xs-4 responsive-col">
+					<div class="col">
 						<h2>Topic 2</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis consectetur, officia esse ad similique molestiae velit quis saepe temporibus omnis necessitatibus ipsum deleniti ipsam commodi officiis, id sapiente placeat aut.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis consectetur, officia esse ad similique molestiae velit quis saepe temporibus omnis necessitatibus ipsum deleniti ipsam commodi officiis, id sapiente placeat aut.</p>
+            <i class="fab fa-facebook fa-lg"></i>
 					</div>
-					<div class="col-xs-4 responsive-col">
+					<div class="col">
 						<h2>Topic 3</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo natus mollitia assumenda molestias! Dolor animi voluptatum in vel expedita, dolorem repudiandae quod aut tempore, harum, laborum perspiciatis nam quibusdam dignissimos!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo natus mollitia assumenda molestias! Dolor animi voluptatum in vel expedita, dolorem repudiandae quod aut tempore, harum, laborum perspiciatis nam quibusdam dignissimos!</p>
+            <i class="fab fa-instagram fa-lg"></i>
 					</div>					
 				</div>
 				
@@ -166,10 +75,7 @@
         <p>&copy <span id="crYear"></span>; NJ Photography</p>
     </footer>
 
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="dist/bundle.js"></script>
   </body>
 </html>

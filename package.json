@@ -2,18 +2,22 @@
   "name": "NJPhotography",
   "version": "1.0.0",
   "description": "NJPhotography web portfolio",
-  "main": "home.js",
+  "main": "index.js",
   "repository": "https://github.com/mrsantacruz86/my-website.git",
   "author": "Nelson Diaz <abnerdc86@gmail.com>",
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "webpack": "^4.30.0"
+    "css-loader": "^2.1.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1"
   },
   "scripts": {
     "test": "echo \"Error: No test specified\" && exit 1",
-    "build": "webpack src/js/app.js dist/bundle.js",
-    "build:prod": "webpack src/js/app.js dist/bundle.js -p"
+    "build": "webpack-dev-server",
+    "build:prod": "webpack -p"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",

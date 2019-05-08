@@ -1,14 +1,19 @@
-/*jQuery methods*/
+import 'bootstrap/dist/css/bootstrap.css';
 
-/*$(function(){
+import jquery from 'jquery';
+window.$ = jquery;
+
+// jQuery methods
+$(function(){
 		$('.nav li').filter(function(){return this.href==location.href}).parent().addClass('active').siblings().removeClass('active')
 		$('.nav li').click(function(){
 			$(this).parent().addClass('active').siblings().removeClass('active')	
 		})
-})*/
+})
 $(function () {
     $(function () { $("#crYear").text(new Date().getFullYear()) });
 })
+
 
 // Script to load the images
 function loadImages() {
@@ -20,4 +25,6 @@ function loadImages() {
     return tag
 }
 
-document.getElementById("gallery-1").innerHTML = loadImages();
+// document.getElementById("gallery-1").innerHTML = loadImages();
+
+$("#root").html("<h2>Executing JS...</h2>");
