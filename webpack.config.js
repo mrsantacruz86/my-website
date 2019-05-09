@@ -1,10 +1,10 @@
 const path = require("path");
-const webpack = require("webpack");
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const webpack = require("webpack");
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var extractPlugin = new ExtractTextPlugin({
-  filename: "main.css"
-})
+// var extractPlugin = new ExtractTextPlugin({
+//   filename: "main.css"
+// })
 
 module.exports = {
   mode: "development",
@@ -18,24 +18,34 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        exclude: /(node_modules)/,
         use: [
           {
             loader: "babel-loader",
             options: {
-              presets: ["es2015"]
+              presets: ["env"]
             }
           }
         ]
       },
       {
-        test: /\.scss$/,
-        use: extractPlugin.extract({
-          use: ['css-loader', 'sass-loader']
-        })
+        test: /\.(s*)css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 5000
+            }
+          }
+        ]
       }
     ]
   },
-  plugins: [
-    extractPlugin
-  ]
+  // plugins: [
+  //   extractPlugin
+  // ]
 }

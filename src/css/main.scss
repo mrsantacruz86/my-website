@@ -18,13 +18,13 @@ body{
 /*----------------------------------------
 Carousel Styles
 ----------------------------------------*/
-/* #myCarousel {
+#myCarousel {
 	margin-top: 3px;
 }
 
-#myCarousel .item {	height:480px; } */
+#myCarousel .item {	height:480px; }
 
-/* #slide1 {
+#slide1 {
 	background: url('../images/carousel/img-1.jpg') top center no-repeat;
 }
 #slide2 {
@@ -47,4 +47,16 @@ Carousel Styles
 }
 #slide8 {
 	background: url('../images/carousel/img-8.jpg') top center no-repeat;
-} */
+}
+
+
+#logo{
+	max-height: 2.5rem;
+}
+
+#alert-btn{
+	background-color: #0f4b21;
+	padding: 1rem;
+	color: white;
+	border-radius: .5rem;
+}

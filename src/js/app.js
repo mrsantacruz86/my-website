@@ -29,3 +29,7 @@ function loadImages() {
 // document.getElementById("gallery-1").innerHTML = loadImages();
 
 $("#root").html("<h2>Executing JS...</h2>");
+
+$("#alert-btn").on("click", ()=>{
+  alert("The button has been clicked");
+})
