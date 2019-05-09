@@ -1,19 +1,35 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/main.scss';
+import { getGif } from './api';
 
 import jquery from 'jquery';
 window.$ = jquery;
 
 // jQuery methods
 $(function () {
+  // handle nav-link active
   $('.nav li').filter(function () { return this.href == location.href }).parent().addClass('active').siblings().removeClass('active')
   $('.nav li').click(function () {
     $(this).parent().addClass('active').siblings().removeClass('active')
   })
-})
-$(function () {
+
+  //add year to the copyright
   $(function () { $("#crYear").text(new Date().getFullYear()) });
-})
+
+  //handle button click event
+  $("#alert-btn").on("click", () => {
+    getGif("dog")
+      .then(res => {
+        const src = res.data.images.fixed_height.url;
+        // console.log(res.data.images.fixed_height.url);
+        const $imgDisplay = $('<div class="img-display">');
+        $imgDisplay.append($(`<img src="${src}">`))
+        $("#root").append($imgDisplay);
+      })
+      .catch(err => console.log(err));
+  })
+});
+
 
 
 // Script to load the images
@@ -28,8 +44,3 @@ function loadImages() {
 
 // document.getElementById("gallery-1").innerHTML = loadImages();
 
-$("#root").html("<h2>Executing JS...</h2>");
-
-$("#alert-btn").on("click", ()=>{
-  alert("The button has been clicked");
-})

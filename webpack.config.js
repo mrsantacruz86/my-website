@@ -30,13 +30,13 @@ module.exports = {
       },
       {
         test: /\.(s*)css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.(png|jpg|gif)$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: "url-loader",
             options: {
               limit: 5000
             }
