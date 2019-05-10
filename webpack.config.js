@@ -1,17 +1,23 @@
 const path = require("path");
-// const webpack = require("webpack");
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-// var extractPlugin = new ExtractTextPlugin({
-//   filename: "main.css"
-// })
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  mode: "development",
+  mode: "production",
+  mode: "production",
+  // using mode: "production" attaches the following configuration:
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new UglifyJsPlugin()
+    ]
+  },
   entry: "./src/js/app.js",
   output: {
+    filename: "main.[chunkhash].bundle.js",
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
     publicPath: "/dist"
   },
   module: {
@@ -45,7 +51,11 @@ module.exports = {
       }
     ]
   },
-  // plugins: [
-  //   extractPlugin
-  // ]
+  plugins: [
+    new HtmlWebpackPlugin({ template: './index.html' }),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify("production")
+    }),
+    new webpack.NoEmitOnErrorsPlugin()
+  ]
 }
