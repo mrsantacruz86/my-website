@@ -11,14 +11,21 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
-      new UglifyJsPlugin()
+      new UglifyJsPlugin({
+        uglifyOptions: {
+            compress: {
+              /*(...)*/
+              drop_console:true
+            }
+        }
+    })
     ]
   },
   entry: "./src/js/app.js",
   output: {
     filename: "main.[chunkhash].bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/dist"
+    path: path.resolve(__dirname, "dist")
+    // publicPath: "/dist"
   },
   module: {
     rules: [

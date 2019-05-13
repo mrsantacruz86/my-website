@@ -27,8 +27,8 @@
   },
   "scripts": {
     "test": "echo \"Error: No test specified\" && exit 1",
-    "build": "webpack-dev-server",
-    "build:prod": "webpack -p"
+    "start": "webpack-dev-server",
+    "build": "webpack -p"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",

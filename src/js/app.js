@@ -1,8 +1,8 @@
 import '../css/main.scss';
-import { getGif } from './api';
-
 import jquery from 'jquery';
 window.$ = jquery;
+import { getGif } from './api';
+import "bootstrap";
 
 // jQuery methods
 $(function () {
