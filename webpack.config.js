@@ -2,10 +2,11 @@ const path = require("path");
 
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: "production",
   mode: "production",
   // using mode: "production" attaches the following configuration:
   optimization: {
@@ -13,18 +14,20 @@ module.exports = {
     minimizer: [
       new UglifyJsPlugin({
         uglifyOptions: {
-            compress: {
-              /*(...)*/
-              drop_console:true
-            }
+          compress: {
+            drop_console: true
+          }
         }
-    })
+      })
     ]
   },
-  entry: "./src/js/app.js",
+  entry: {
+    main: "./src/js/app.js",
+    gallery: "./src/js/gallery.js"
+  },
   output: {
-    filename: "main.[chunkhash].bundle.js",
-    path: path.resolve(__dirname, "dist")
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "/dist")
     // publicPath: "/dist"
   },
   module: {
@@ -42,15 +45,26 @@ module.exports = {
         ]
       },
       {
-        test: /\.(s*)css$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development',
+              reloadAll: true
+            }
+          },
+          "css-loader",
+          "sass-loader"
+        ]
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpe?g|svg|gif)$/,
         use: [
           {
             loader: "url-loader",
             options: {
+              name: "/img/[name]_[hash:7].[ext]",
               limit: 5000
             }
           }
@@ -59,10 +73,24 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './index.html' }),
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "./index.html"
+    }),
+    new HtmlWebpackPlugin({
+      filename: "gallery.html",
+      template: "./gallery.html"
+    }),
+    //To generate more html files for production just add a new HtmlWebpackPlugin()
+
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production")
     }),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
   ]
 }
