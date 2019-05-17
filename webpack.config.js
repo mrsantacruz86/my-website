@@ -7,7 +7,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: "production",
+  // mode: "production",
   // using mode: "production" attaches the following configuration:
   optimization: {
     minimize: true,
@@ -27,8 +27,8 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "./docs"),
-    publicPath: "./docs"
+    path: path.resolve(__dirname, "./dist"),
+    publicPath: "./dist"
   },
   module: {
     rules: [
@@ -76,11 +76,11 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: "./index.html"
+      template: "./src/index.html"
     }),
     new HtmlWebpackPlugin({
       filename: "gallery.html",
-      template: "./gallery.html"
+      template: "./src/gallery.html"
     }),
     //To generate more html files for production just add a new HtmlWebpackPlugin()
 
