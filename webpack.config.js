@@ -23,7 +23,7 @@ module.exports = {
   },
   entry: {
     main: "./src/js/app.js",
-    gallery: "./src/js/gallery.js"
+    about: "./src/js/about.js"
   },
   output: {
     filename: "[name].bundle.js",
@@ -79,8 +79,8 @@ module.exports = {
       template: "./src/index.html"
     }),
     new HtmlWebpackPlugin({
-      filename: "gallery.html",
-      template: "./src/gallery.html"
+      filename: "about-us.html",
+      template: "./src/about-us.html"
     }),
     //To generate more html files for production just add a new HtmlWebpackPlugin()
 

@@ -1,0 +1,32 @@
+/*Gallery Styles*/
+
+.galleria{
+	width: 1024px; 
+	height: 600px; 
+	background: #111;
+}
+#gallery-1{
+	margin:0 auto;
+}
+/*----------------------------------------
+Media Queries
+----------------------------------------*/
+
+/* Portrait & Landscape Phone */
+@media (max-width: 480px){
+	#gallery-1 {	height: 310px}
+
+}
+
+/* Landscape Phone to Portrait Tablet*/
+@media (max-width: 768px){
+	#gallery-1 {	height: 700px}
+
+	
+}
+
+/* Large Desktop*/
+@media (max-width: 1200px){
+	#gallery-1 {	height: 700px}
+	
+}

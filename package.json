@@ -28,7 +28,8 @@
   "scripts": {
     "test": "echo \"Error: No test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
