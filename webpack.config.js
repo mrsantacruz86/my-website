@@ -7,7 +7,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  // mode: "production",
+  mode: "production",
   // using mode: "production" attaches the following configuration:
   optimization: {
     minimize: true,
@@ -28,7 +28,7 @@ module.exports = {
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "./dist"),
-    publicPath: "./dist"
+    // publicPath: "/"
   },
   module: {
     rules: [
